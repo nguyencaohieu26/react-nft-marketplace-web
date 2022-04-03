@@ -7,7 +7,7 @@ const MasterLayout = ({children}) => {
 
   useEffect(()=>{
     window.addEventListener('scroll',()=>{
-      if(window.pageYOffset > 300){
+      if(window.pageYOffset > 500){
         setShowBackToTopButton(true);
       }else{
         setShowBackToTopButton(false);
@@ -36,6 +36,11 @@ const MasterLayout = ({children}) => {
         <footer>
             <Footer/>
         </footer>
+        <div>
+        <button className={`scrollTopButton ${showBackToTopButton ? 'active' : null}`} onClick={scrollToTop}>
+          <i className="fa-solid fa-arrow-up-long"></i>
+        </button>
+        </div>
     </section>
   )
 }

@@ -1,7 +1,6 @@
-import About from './pages/About';
-import Home from './pages/Home/Home';
-import Contact from './pages/Contact';
-import styled from 'styled-components';
+import About from './pages/AboutPage/About';
+import Home from './pages/HomePage/Home';
+import Contact from './pages/ContactPage/Contact';
 import {Routes,Route} from 'react-router-dom';
 import MasterLayout from './layouts/master.layout';
 

@@ -4,13 +4,13 @@ import {NewProductList,AboutList,ExploreProductList,TopSellersList} from '../../
 import ProductCard from '../../components/ProductCard/ProductCard.component';
 import TopSellerCard from '../../components/TopSellerCard/TopSellerCard.component';
 import { Hero,NewProduct,ProductList,AboutContainer,ExploreProductContainer,TopSellersContainer } from './Home.styles'
-
+import { format } from 'date-fns';
 const Home = () => {
   return (
     <section>
       <article>
         {/*    #HERO    */}
-        <Hero>
+        <Hero className='hero'>
           <div className="container">
             <div className="hero-content">
               <h1 className="h1 hero-title">
@@ -31,13 +31,13 @@ const Home = () => {
         </Hero>
         
         {/*    #NEW PRODUCT   */}
-        <NewProduct>
+        <NewProduct className='new-product'>
           <div className="container">
             <div className="section-header-wrapper">
               <h2 className="h2 section-title">Newest Items</h2>
               <button className="btn btn-primary">View all</button>
             </div>
-            <ProductList>
+            <ProductList className='product-list'>
               {NewProductList.map(product=>{
                 return <li className="product-item" key={product.id}>
                   <ProductCard product={product}/>
@@ -49,7 +49,7 @@ const Home = () => {
         </NewProduct>
         
         {/*     #ABOUT        */}
-        <AboutContainer>
+        <AboutContainer className='about-section'>
           <div className="container">
             <h2 className="h2 about-title">Create and sell your NFTs</h2>
              <ol className="about-list">
@@ -63,13 +63,13 @@ const Home = () => {
         </AboutContainer>
         
         {/*     #EXPLORE PRODUCT    */}
-        <ExploreProductContainer>
+        <ExploreProductContainer class="explore-section">
           <div className="container">
           <div className="section-header-wrapper">
               <h2 className="h2 section-title">Explore Product</h2>
               <button className="btn btn-primary">Explore</button>
             </div>
-            <ProductList>
+            <ProductList className='product-list'>
               {ExploreProductList.map(product=>{
                 return <li className="product-item" key={product.id}>
                   <ProductCard product={product}/>
@@ -80,10 +80,10 @@ const Home = () => {
         </ExploreProductContainer>
 
         {/*     #TOP SELLER   */}
-        <TopSellersContainer>
+        <TopSellersContainer className='top-seller-section'>
           <div className="container">
             <h2 className="h2 top-seller-title">
-              Top seller in <span>{new Date().toString()} </span>day
+              Top seller in <span>{format(new Date(),'do MMMM Y')} </span>day
               <i className="fa-solid fa-chevron-down"></i>
             </h2>
             <ol className="top-seller-list">  

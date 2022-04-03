@@ -89,6 +89,7 @@ export const TopSellersContainer = styled.section`
 
     .top-seller-list{
         display: grid;
+        gap: 15px;
         grid-template-columns: 1fr;
     }
 `

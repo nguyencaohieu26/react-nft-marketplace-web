@@ -41,12 +41,12 @@ export const NavBar = styled.nav`
     }
 `
 export const NavbarLink = styled(Link)`
-    background-color: transparent;
+    background: transparent;
     color: var(--white);
     font-size: var(--fs-7);
     padding: 8px 10px;
     border-radius: 4px;
     &:is(:hover,:focus){
-        background-color: var(--davys-gray);
+        background: var(--davys-gray);
     }
 `

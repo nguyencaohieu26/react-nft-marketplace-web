@@ -5,7 +5,7 @@ import {FooterBottom,FooterTop} from './Footer.styles';
 const Footer = () => {
   return (
     <section>
-      <FooterTop>
+      <FooterTop className='footer-top'>
         <div className="container">
           <div className="footer-brand">
             <Link to="/" className="logo">
@@ -101,12 +101,14 @@ const Footer = () => {
           </div>
         </div>
       </FooterTop>
-      <FooterBottom>
+      <FooterBottom className='footer-bottom'>
         <div className="container">
-          <p className="copyright">
+         <div>
+         <p className="copyright">
             2022 <Link to="https://www.youtube.com/channel/UC1PZHWV6VvICTL1LgFUZq6g">@codewithsadee</Link> all rights reserved
           </p>
           <p className='more-text'>Keep Pratice! Made with love</p>
+         </div>
           <div className="footer-bottom-links">
             <Link to="/">Privacy Policy</Link>
             <Link to="/">Term & Conditions</Link>

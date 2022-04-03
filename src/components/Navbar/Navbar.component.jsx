@@ -17,13 +17,13 @@ const Navbar = () => {
         </Link>
         <div className='header-right'>
           <div className="header-nav-wrapper">
-            <NavbarToggleButton onClick={handleToggleMenu}><i className="fa-solid fa-bars"></i></NavbarToggleButton>
-            <NavBar className={isToggleMenuOpen ? 'active' : null}>
+            <NavbarToggleButton className='navbar-toggle-btn' onClick={handleToggleMenu}><i className="fa-solid fa-bars"></i></NavbarToggleButton>
+            <NavBar className={`navbar ${isToggleMenuOpen ? 'active' : null}`}>
               <ul className="navbar-list">
                 {
                   publicRoutes.map(link =>{
                     return (<li key={link.id}>
-                      <NavbarLink to={`${link.path}`}>{link.title}</NavbarLink>
+                      <NavbarLink className='navbar-link' to={`${link.path}`}>{link.title}</NavbarLink>
                     </li>)
                   })
                 }

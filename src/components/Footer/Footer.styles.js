@@ -9,7 +9,6 @@ export const FooterTop = styled.div`
         margin-bottom: 40px;
         .logo{margin-bottom: 25px;}
 
-        .footer-brand-text{display: none;}
         
         .social-title{
             color: var(--white);
